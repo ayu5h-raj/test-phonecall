@@ -26,7 +26,6 @@ app.get('/call', (req, res) => {
             from: fromNum
         })
         .then(call => {
-            console.log(call)
             res.send({
                 "sid": call.sid,
                 "startTime": new Date()
