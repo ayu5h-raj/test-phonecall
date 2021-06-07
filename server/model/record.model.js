@@ -1,20 +1,21 @@
 module.exports = (sequelize, Sequelize) => {
-    const CallRecord = sequelize.define("callrecord", {
-      sid: {
-        type: Sequelize.STRING
-      },
-      to: {
-        type: Sequelize.STRING
-      },
-      from: {
-        type: Sequelize.STRING
-      },
-      duration:{
-          type: Sequelize.STRING
-      },
-      startTime: {
-          type: Sequelize.TIME
-      }
-    });
-    return CallRecord;
-  };
+  const CallRecord = sequelize.define("callrecord", {
+    name: {
+      type: Sequelize.STRING,
+    },
+    sid: {
+      type: Sequelize.STRING,
+      primaryKey: true
+    },
+    to: {
+      type: Sequelize.STRING
+    },
+    from: {
+      type: Sequelize.STRING
+    },
+    startTime: {
+      type: Sequelize.DATE
+    },
+  });
+  return CallRecord;
+};

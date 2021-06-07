@@ -22,6 +22,7 @@ function App() {
 
     setTimeout(()=>{
         axios.post(`/terminateCall`,{
+          name: name,
           sid: sid,
           toPhone: toPhone,
           fromPhone: fromPhone,
